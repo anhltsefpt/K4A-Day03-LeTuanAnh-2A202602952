@@ -3,9 +3,9 @@
     "step": 1,
     "query": "Chào bạn, bạn có thể giới thiệu quy chế học vụ cơ bản của Đại học VinUni không?",
     "action_type": "FINAL_ANSWER",
-    "thought": "Câu hỏi chung về quy chế học vụ, trả lời trực tiếp không cần gọi Tool.",
-    "output": "[Mock Agent Response]: Xin chào! Quy chế học vụ VinUni yêu cầu sinh viên tích lũy tối thiểu 120 tín chỉ và duy trì GPA trên 2.0 để tốt nghiệp.",
-    "latency_ms": 2845.93
+    "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
+    "output": "Quy chế học vụ của Đại học VinUni bao gồm nhiều quy định và hướng dẫn nhằm đảm bảo chất lượng đào tạo và quyền lợi cho sinh viên. Dưới đây là một số điểm cơ bản trong quy chế học vụ:\n\n1. **Đăng ký học phần**: Sinh viên cần thực hiện đăng ký học phần theo đúng thời gian quy định, đảm bảo đủ tín chỉ để đáp ứng yêu cầu tốt nghiệp.\n\n2. **Điều kiện tốt nghiệp**: Sinh viên phải hoàn thành một số lượng tín chỉ tối thiểu, đạt điểm trung bình tối thiểu và không vi phạm các quy định nhà trường.\n\n3. **Điểm số**: Các hình thức đánh giá và chấm điểm được quy định rõ ràng. Điểm số thường sẽ bao gồm điểm thi giữa kỳ, cuối kỳ và các bài tập, dự án.\n\n4. **Vắng mặt**: Có quy định về việc phép vắng mặt trong các buổi học, bao gồm cả lý do chính đáng và không chính đáng. Sinh viên cần theo dõi số buổi vắng để không ảnh hưởng đến kết quả học tập.\n\n5. **Học bổng**: Quy định về các loại học bổng, điều kiện để xin học bổng và quy trình thực hiện.\n\n6. **Kỷ luật**: Các quy định về kỷ luật, bao gồm các hành vi bị cấm và hình thức xử lý đối với các vi phạm.\n\n7. **Hỗ trợ sinh viên**: Các dịch vụ hỗ trợ, tư vấn học tập và hướng nghiệp cho sinh viên.\n\nĐây chỉ là một tổng quan khái quát về quy chế học vụ tại VinUni. Để có thông tin chi tiết hơn hoặc cụ thể về từng phần, bạn nên tham khảo tài liệu chính thức từ trường hoặc bộ phận học vụ.",
+    "latency_ms": 4250.06
   },
   {
     "step": 1,
@@ -15,15 +15,148 @@
     "arguments": {
       "student_id": "SV2026001"
     },
-    "observation": {},
-    "latency_ms": 799.12
+    "observation": {
+      "status": "SUCCESS",
+      "student_id": "SV2026001",
+      "data": {
+        "full_name": "Nguyễn Văn An",
+        "class": "AI-K4",
+        "gpa": 3.85,
+        "email": "an.nv@vinuni.edu.vn",
+        "status": "Đang học",
+        "advisor": "PGS.TS Nguyễn Văn A"
+      }
+    },
+    "latency_ms": 983.64
   },
   {
     "step": 2,
     "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
     "action_type": "FINAL_ANSWER",
-    "thought": "Tổng hợp kết quả từ MCP Server thành công.",
-    "output": "Chưa thể trả lời chi tiết do chưa nhận được dữ liệu từ MCP Server (hãy hoàn thành TODO 2.1).",
-    "latency_ms": 10.0
+    "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
+    "output": "Thông tin học vụ của sinh viên SV2026001 như sau:\n\n- **Họ và Tên**: Nguyễn Văn An\n- **Lớp**: AI-K4\n- **Điểm trung bình GPA**: 3.85\n- **Email**: an.nv@vinuni.edu.vn\n- **Trạng thái**: Đang học\n- **Cố vấn học tập**: PGS.TS Nguyễn Văn A\n\nNếu bạn cần thêm thông tin hoặc muốn đặt lịch hẹn với cố vấn học tập, hãy cho tôi biết!",
+    "latency_ms": 1872.35
+  },
+  {
+    "step": 1,
+    "query": "Đặt giúp tôi một lịch hẹn tư vấn học vụ cho sinh viên SV2026001 vào lúc 9h00 sáng ngày 20/09/2026.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV2026001"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "student_id": "SV2026001",
+      "data": {
+        "full_name": "Nguyễn Văn An",
+        "class": "AI-K4",
+        "gpa": 3.85,
+        "email": "an.nv@vinuni.edu.vn",
+        "status": "Đang học",
+        "advisor": "PGS.TS Nguyễn Văn A"
+      }
+    },
+    "latency_ms": 1246.78
+  },
+  {
+    "step": 2,
+    "query": "Đặt giúp tôi một lịch hẹn tư vấn học vụ cho sinh viên SV2026001 vào lúc 9h00 sáng ngày 20/09/2026.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "schedule_appointment",
+    "arguments": {
+      "student_id": "SV2026001",
+      "datetime_str": "09:00 20/09/2026",
+      "advisor_name": "PGS.TS Nguyễn Văn A"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "BK-SV2026001-99",
+      "student_id": "SV2026001",
+      "datetime": "09:00 20/09/2026",
+      "advisor": "PGS.TS Nguyễn Văn A",
+      "message": "Đặt lịch thành công cho sinh viên SV2026001 với PGS.TS Nguyễn Văn A vào lúc 09:00 20/09/2026."
+    },
+    "latency_ms": 1113.74
+  },
+  {
+    "step": 3,
+    "query": "Đặt giúp tôi một lịch hẹn tư vấn học vụ cho sinh viên SV2026001 vào lúc 9h00 sáng ngày 20/09/2026.",
+    "action_type": "FINAL_ANSWER",
+    "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
+    "output": "Bạn đã đặt thành công lịch hẹn tư vấn học vụ cho sinh viên SV2026001 (Nguyễn Văn An) với PGS.TS Nguyễn Văn A. Lịch hẹn được xác nhận vào lúc 09:00 sáng ngày 20/09/2026.\n\nNếu cần hỗ trợ thêm, hãy cho tôi biết!",
+    "latency_ms": 1193.24
+  },
+  {
+    "step": 1,
+    "query": "Sinh viên SV2026001 muốn gặp cố vấn học tập của mình. Hãy tra cứu xem cố vấn học tập của sinh viên này là ai, rồi đặt lịch hẹn tư vấn với đúng cố vấn đó vào 14h00 ngày 22/09/2026.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV2026001"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "student_id": "SV2026001",
+      "data": {
+        "full_name": "Nguyễn Văn An",
+        "class": "AI-K4",
+        "gpa": 3.85,
+        "email": "an.nv@vinuni.edu.vn",
+        "status": "Đang học",
+        "advisor": "PGS.TS Nguyễn Văn A"
+      }
+    },
+    "latency_ms": 1068.09
+  },
+  {
+    "step": 2,
+    "query": "Sinh viên SV2026001 muốn gặp cố vấn học tập của mình. Hãy tra cứu xem cố vấn học tập của sinh viên này là ai, rồi đặt lịch hẹn tư vấn với đúng cố vấn đó vào 14h00 ngày 22/09/2026.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "schedule_appointment",
+    "arguments": {
+      "student_id": "SV2026001",
+      "datetime_str": "14:00 22/09/2026",
+      "advisor_name": "PGS.TS Nguyễn Văn A"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "BK-SV2026001-99",
+      "student_id": "SV2026001",
+      "datetime": "14:00 22/09/2026",
+      "advisor": "PGS.TS Nguyễn Văn A",
+      "message": "Đặt lịch thành công cho sinh viên SV2026001 với PGS.TS Nguyễn Văn A vào lúc 14:00 22/09/2026."
+    },
+    "latency_ms": 1381.46
+  },
+  {
+    "step": 3,
+    "query": "Sinh viên SV2026001 muốn gặp cố vấn học tập của mình. Hãy tra cứu xem cố vấn học tập của sinh viên này là ai, rồi đặt lịch hẹn tư vấn với đúng cố vấn đó vào 14h00 ngày 22/09/2026.",
+    "action_type": "FINAL_ANSWER",
+    "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
+    "output": "Sinh viên SV2026001, Nguyễn Văn An, đã được đặt lịch hẹn tư vấn với cố vấn học tập PGS.TS Nguyễn Văn A vào lúc 14:00 ngày 22/09/2026. \n\nThông tin đặt lịch thành công như sau:\n- **Tên cố vấn**: PGS.TS Nguyễn Văn A\n- **Thời gian**: 14:00, 22/09/2026\n- **Booking ID**: BK-SV2026001-99\n\nNếu bạn cần thêm thông tin hoặc hỗ trợ gì khác, hãy cho tôi biết!",
+    "latency_ms": 1718.77
+  },
+  {
+    "step": 1,
+    "query": "Hãy tra cứu thông tin học vụ và điểm GPA của sinh viên SV9999999 giúp tôi.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "academic_query",
+    "arguments": {
+      "student_id": "SV9999999"
+    },
+    "observation": {
+      "status": "NOT_FOUND",
+      "message": "Không tìm thấy dữ liệu sinh viên có mã 'SV9999999'"
+    },
+    "latency_ms": 1639.22
+  },
+  {
+    "step": 2,
+    "query": "Hãy tra cứu thông tin học vụ và điểm GPA của sinh viên SV9999999 giúp tôi.",
+    "action_type": "FINAL_ANSWER",
+    "thought": "OpenAI phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
+    "output": "Rất tiếc, tôi không thể tìm thấy thông tin học vụ cho sinh viên có mã \"SV9999999\". Có thể mã sinh viên này không chính xác hoặc sinh viên này không có trong hệ thống. Bạn vui lòng kiểm tra lại mã sinh viên và cung cấp cho tôi một mã khác nếu có.",
+    "latency_ms": 1171.19
   }
 ]
